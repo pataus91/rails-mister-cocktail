@@ -1,8 +1,8 @@
 <!-- Ici coder l'html -->
 
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <%= link_to "#", class: "navbar-brand" do %>
-    <%= image_tag "https://imgbin.com/png/Y9y2UnRu/bacardi-cocktail-martini-cocktail-glass-logo-png" %>
+  <%= link_to cocktails_path, class: "navbar-brand" do %>
+     <i class="fas fa-cocktail"></i>
   <% end %>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -13,7 +13,7 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <%= link_to "Home", "#", class: "nav-link" %>
+        <%= link_to "Home", cocktails_path, class: "nav-link" %>
       </li>
       <li class="nav-item">
         <%= link_to "Messages", "#", class: "nav-link" %>
