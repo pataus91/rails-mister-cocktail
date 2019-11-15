@@ -1,10 +1,19 @@
-
-
-
-  <h1>Cocktail List</h1>
-  <% @cocktails.each do |cocktail| %>
-    <ul>
-      <li><%= link_to cocktail.name, cocktail_path(cocktail) %></li>
-    </ul>
-  <% end %>
-  <%= link_to 'Create Cocktail', new_cocktail_path, class: 'btn btn-primary' %>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.2)), url(https://images.unsplash.com/photo-1486428263684-28ec9e4f2584?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80);">
+  <div class="container text-center">
+    <h1>Cocktail List</h1>
+    <p>Find amazing cocktails. Create your owns!</p>
+   <!--  <a class="btn btn-flat" href="#">Apply now</a> -->
+  </div>
+</div>
+<div class="container-fluid mt-5 mb-2 text-center">
+  <h2>Discover all our exclusive cocktais</h2>
+    <div class="container d-flex flex-wrap mt-5">
+      <% @cocktails.each do |cocktail| %>
+        <div class="col-4 mb-3" style="height: 350px">
+          <div class="card">
+            <h2><%= link_to cocktail.name, cocktail_path(cocktail) %></h2>
+          </div>
+        </div>
+        <% end %>
+    </div>
+</div>
